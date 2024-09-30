@@ -6,6 +6,8 @@ My solution uses **Express** (with **TypeScript**!) to implement the API. On sta
 
 The data types in the schema are inferred from the data and typecast to the most suitable type. The OPTION type was particularly tricky because it is technically the same as a string, and determining whether a field is an OPTION or TEXT can be difficult. In this implementation, if 5 or more unique values are detected, the data is classified as a TEXT otherwise, it is considered to be an OPTION.
 
+I added a few of the extra features but the Delete and Patch end points are missing. Also pagination support isn't there. Ideally would use an ORM for this which would make the querying and data cleaning much more efficient. The nested loops during data processing aren't great to use but are needed since we need to check each key inside each record. 
+
 
 ## To Run
 `npm install`
@@ -52,3 +54,10 @@ The API exposes three routes:
 - Returns a single object if found, else returns a `"404"`.
 
 
+
+## Screenshots
+
+![SS1](docs/1.png)
+![SS2](docs/2.png)
+![SS3](docs/3.png)
+![SS4](docs/4.png)
